@@ -37,4 +37,20 @@ function clickCounter(event) {
         output.innerHTML = "Koala has been klicked " + clicks + " times.";
       }
 
+      document.title = clicks + " koalas clicked "
+
+      haveCelebration(clicks)
   }
+
+function haveCelebration(count){
+  let celebrate = document.querySelector("img#celebrate")
+  celebrate.classList.add("hidden")
+  if(count === 10){
+    celebrate.classList.remove("hidden")
+    celebrate.setAttribute("src", "party-koala.png")
+  }
+  if(count === 20){
+    celebrate.classList.remove("hidden")
+    celebrate.setAttribute("src", "whoa-koala.png")
+  }
+}
