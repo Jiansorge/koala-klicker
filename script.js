@@ -23,6 +23,7 @@ function clickCounter(event) {
 
   function outputClicks(){
     var output = document.getElementById("result");
+    let tabOutput = document.querySelector("title");
     /*
       Clear the existing contents of the "list" element. Then, for each object in courseList,
       create an li element that holds the course's name and grade, and append
@@ -33,8 +34,17 @@ function clickCounter(event) {
 
       if (clicks === 1) {
         output.innerHTML = "Koala has been klicked " + clicks + " time.";
+        tabOutput.innerHTML = clicks + " klick - Koala Kounter";
       } else {
         output.innerHTML = "Koala has been klicked " + clicks + " times.";
+        tabOutput.innerHTML = clicks + " klicks - Koala Kounter";
       }
+      if (!(clicks%10)) {
+        output.style.color = "blue";
+      }
+      else{
+        output.style.color = "black"
+      }
+
 
   }
