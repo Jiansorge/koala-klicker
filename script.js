@@ -23,11 +23,7 @@ function clickCounter(event) {
 
   function outputClicks(){
     var output = document.getElementById("result");
-    /*
-      Clear the existing contents of the "list" element. Then, for each object in courseList,
-      create an li element that holds the course's name and grade, and append
-      it to the "list" ul element.
-    */
+
       output.innerHTML = "";
       console.log(output);
 
